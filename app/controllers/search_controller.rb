@@ -11,7 +11,6 @@ class SearchController < ApplicationController
 
   def filtrar
     @filtro = {cidade: params["cidade"]}
-    puts "params #{params}"
     url = nil
     @json = []
     @alerta = nil
@@ -28,7 +27,6 @@ class SearchController < ApplicationController
     else
       url = URL + "cidade="+ params["cidade"] 
     end
-    puts "URL #{url}"
 
     pagina = @mechanize.get(url)
     resultado = JSON.parse(pagina.body)
@@ -63,7 +61,6 @@ class SearchController < ApplicationController
       @json.push(veiculo)
       @sucesso = "Achamos o seu veiculo! :)"
     end
-    puts "JSON >>>>>>>>>>: #{@json}"
     retorno()
   end
 

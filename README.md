@@ -1,24 +1,16 @@
-# README
+# Test Crawler
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+É um projeto Ruby on Rails para um teste com o objetivo de criar um crawler. 
+Através da Gem **[mechanize](https://rubygems.org/gems/mechanize)** é feito uma busca diretamente na API do site **[meucarronovo.com.br](https://www.meucarronovo.com.br/)**
 
-Things you may want to cover:
+## Filtros
+A busca pode ser filtrada por cidade, tipo de veículo, marca e modelo  
 
-* Ruby version
+## Rodar o projeto
+Instalara as dependências 
+> bundle install
 
-* System dependencies
+Executar o projeto
+> rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Acesse o navegador e abra o link http://localhost:3000/ e seja feliz! :)
