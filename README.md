@@ -7,7 +7,7 @@ Através da Gem **[mechanize](https://rubygems.org/gems/mechanize)** é feito um
 A busca pode ser filtrada por cidade, tipo de veículo, marca e modelo  
 
 ## Rodar o projeto
-Instalara as dependências 
+Instalar as dependências 
 > bundle install
 
 Executar o projeto
