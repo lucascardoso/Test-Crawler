@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          Hands On
+        </a>
+    </div>
+</nav>
+<div class="container">
+    <form action="/" method="post">
+        <div class="row row-cols-6">
+            <div class="mb-3 col-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" name="cidade" id="cidade" value="<%= @filtro[:cidade]%>">
+            </div>
+            <div class="mb-3 col-3">
+                <label for="marcaveiculo" class="form-label">Marca</label>
+                <input type="text" class="form-control" name="marca" id="marcaveiculo">
+            </div>
+        </div>
+        <div class="row row-cols-6">
+            <div class="mb-3 col-3">
+                <label for="modeloVeiculo" class="form-label">Modelo</label>
+                <input type="tex" class="form-control" name="modelo" id="modeloVeiculo">
+            </div>
+            <div class="mb-3 col-3">
+                <label for="tipoVeiculo" class="form-label">Tipo Veiculo</label>
+                <select class="form-control" name="tipo" id="tipoVeiculo" class="form-select">
+                    <option selected value="0">Selecione o tipo do veiculo</option>
+                    <option value="A">Carro</option>
+                    <option value="M">Moto</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 col-3">
+            <button type="submit" class="btn  btn-primary">Enviar</button>
+        </div>
+    </form>
+    <% if @alerta.present? %>
+        <div class="alert alert-warning" role="alert">
+            <%= @alerta %>
+        </div>
+    <% end %>
+    <% if @sucesso.present? %>
+      <div class="alert alert-success" role="alert">
+          <%= @sucesso %>
+      </div>
+    <% end %>
+    <div class="form-floating">
+      <textarea class="form-control" enable="false" id="floatingTextarea" style="height: 25vw">
+        <% if @json.present? %>
+            <%= JSON.pretty_generate(@json)%>
+        <% end %>
+      </textarea>
+      <label for="floatingTextarea">JSON</label>
+    </div>
+</div>
